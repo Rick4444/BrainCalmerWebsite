@@ -1278,7 +1278,12 @@ personalized emotional tools and upcoming adaptive calm features.
 <div>
 <label style="display:block;margin-bottom:10px;font-weight:600;">Phone Number</label>
 
-<div style="display:grid;grid-template-columns:170px 1fr;gap:14px;">
+<div style="
+display:grid;
+grid-template-columns:1.4fr 1fr 1.1fr;
+gap:60px;
+align-items:start;
+">
 
 <select style="padding:16px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text);font-size:1rem;">
 
@@ -1638,75 +1643,35 @@ overflow:hidden !important;
 
 
 /* =====================================
-   IPAD / TABLET RESPONSIVE FIX
+   IPAD FOOTER FORCE FIX
    ===================================== */
 
 @media screen and (min-width:641px) and (max-width:1024px){
 
-/* PREVENT SIDE SCROLL */
+/* FIND MAIN FOOTER CONTAINER */
 
-body,
-footer{
-overflow-x:hidden !important;
-}
-
-/* NAVBAR */
-
-nav .nav-inner{
+footer .container,
+footer .footer-container,
+footer .footer-inner,
+footer section > .container{
 display:flex !important;
-flex-wrap:wrap !important;
-justify-content:space-between !important;
-align-items:center !important;
-
-gap:20px !important;
-
-padding:18px 24px !important;
-}
-
-/* MENU */
-
-.menu{
-display:flex !important;
-flex-wrap:wrap !important;
-
-justify-content:center !important;
-align-items:center !important;
-
-gap:18px !important;
-}
-
-.menu a{
-font-size:15px !important;
-white-space:nowrap !important;
-}
-
-/* LOGO */
-
-.logo-wrap{
-max-width:100% !important;
-}
-
-/* =====================================
-   FOOTER FIX
-   ===================================== */
-
-.footer-grid{
-display:grid !important;
-
-grid-template-columns:1fr !important;
+flex-direction:column !important;
 
 width:100% !important;
+max-width:100% !important;
+
+gap:40px !important;
 
 padding:0 24px !important;
 
 box-sizing:border-box !important;
-
-gap:40px !important;
 }
 
-/* ALL FOOTER BLOCKS */
+/* ALL BLOCKS FULL WIDTH */
 
-.footer-grid > *{
+footer .container > *,
+footer .footer-container > *,
+footer .footer-inner > *{
 width:100% !important;
 max-width:100% !important;
 
@@ -1719,49 +1684,44 @@ margin:0 auto !important;
 width:100% !important;
 max-width:100% !important;
 
-margin:0 auto !important;
-
 padding:40px 28px !important;
+
+margin:0 auto !important;
 
 box-sizing:border-box !important;
 }
 
-/* DATA CARD TEXT */
+/* TEXT */
 
 .data-card h2{
-text-align:center !important;
-
-font-size:52px !important;
+font-size:48px !important;
 line-height:1.1 !important;
 
-margin-bottom:24px !important;
+text-align:center !important;
 }
 
 .data-card p{
-text-align:center !important;
-
 font-size:20px !important;
-line-height:1.9 !important;
+line-height:1.8 !important;
+
+text-align:center !important;
 }
 
 /* CONFIDENTIAL BOX */
 
 .data-card .confidential{
-margin-top:28px !important;
+width:100% !important;
 
-padding:24px !important;
+padding:22px !important;
 
-font-size:18px !important;
+box-sizing:border-box !important;
 }
 
-/* COPYRIGHT */
+/* PREVENT OVERFLOW */
 
-.footer-bottom,
-.bottom-footer,
-.copyright{
-text-align:center !important;
-
-padding-top:30px !important;
+body,
+footer{
+overflow-x:hidden !important;
 }
 
 }
@@ -1785,7 +1745,12 @@ button.parentElement.classList.toggle("active");
 <footer style="margin-top:100px;padding:70px 8%;background:linear-gradient(180deg,#020817,#071b3d);
 border-top:1px solid rgba(255,255,255,.08);">
 
-<div style="display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:60px;">
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:60px;
+align-items:start;
+">
 
 <div>
 
@@ -1876,9 +1841,16 @@ controlled access standards.
 
 </div>
 
-<div style="margin-top:60px;border-top:1px solid rgba(255,255,255,.08);
-padding-top:20px;display:flex;justify-content:space-between;
-color:rgba(255,255,255,.55);">
+<div style="
+margin-top:60px;
+border-top:1px solid rgba(255,255,255,.08);
+padding-top:20px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:12px;
+color:rgba(255,255,255,.55);
+">
 
 <div>© 2026 Brain Calmer</div>
 <div>Built for emotional wellness & mindful support</div>
